@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <section class="nav__steps">
+      <nav>
+        <div class="container">
+          <ul class="menu__steps">
+            <li>
+              <button class="menu__bullet" data-step="personal_info">1</button>
+              <div class="navBtnDescription">
+                <p class="fs-100 clr-secondary-text ff__regular">STEP 1</p>
+                <p class="fs-200 ff__bold clr-neutral">YOUR INFO</p>
+              </div>
+            </li>
+            <li>
+              <button class="menu__bullet" data-step="select_plan">2</button>
+              <div class="navBtnDescription">
+                <p class="fs-100 clr-secondary-text ff__regular">STEP 2</p>
+                <p class="fs-200 ff__bold clr-neutral">SELECT PLAN</p>
+              </div>
+            </li>
+            <li>
+              <button class="menu__bullet" data-step="pick_addons">3</button>
+              <div class="navBtnDescription">
+                <p class="fs-100 clr-secondary-text ff__regular">STEP 3</p>
+                <p class="fs-200 ff__bold clr-neutral">ADD-ONS</p>
+              </div>
+            </li>
+            <li>
+              <button class="menu__bullet" data-step="finish_board">4</button>
+              <div class="navBtnDescription">
+                <p class="fs-100 clr-secondary-text ff__regular">STEP 4</p>
+                <p class="fs-200 ff__bold clr-neutral">SUMMARY</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <section class="form__steps">
+      <div class="container">
+        <section>
+          <form action="" method="post" id="myform">
+            <div class="step personal__info" data-id="personal_info">
+              <div class="ff__bold">
+                <h2 class="title">Personal Info</h2>
+              </div>
+              <div class="subtitle fs-400 ff__regular">
+                <p>Please provide your name, email address, and phone number.</p>
+              </div>
+              <div class="inputsList flex__column">
+                <label for="name" class="ff__regular fs-100">Name <span>This field is required!</span></label>
+                <input type="text" name="name" class="ff__medium" placeholder="e.g. Stephen King">
+                <label for="emailaddress" class="ff__regular fs-100">Email Address<span>This field is
+                    required!</span></label>
+                <input type="email" name="emailaddress" class="ff__medium" placeholder="e.g. stephenking@lorem.com">
+                <label for="phonenumber" class="ff__regular fs-100">Phone Number<span>This field is
+                    required!</span></label>
+                <input type="tel" name="phonenumber" class="ff__medium" placeholder="e.g. +1 234 567 890">
+              </div>
+            </div>
+            <div class="step select__plan hide" data-plan="monthly" data-id="select_plan">
+              <div class="ff__bold">
+                <h2 class="title">Select your plan</h2>
+              </div>
+              <div class="subtitle fs-400 ff__regular">
+                <p>You have the option of monthly or yearly billing.</p>
+              </div>
+              <div class="flex__column">
+                <div class="inputsList">
+                  <div class="card">
+                    <label for="teste" class="planItem">
+                      <img src="./assets/images/icon-arcade.svg" alt="" width="40" height="40">
+                      <div>
+                        <h2 class="namePlan fs-400 ff__regular">Arcade</h2>
+                        <p class="pricePlan fs-200 ff__regular" data-value="arcade">$9/mo</p>
+                      </div>
+                    </label>
+                    <input type="radio" name="name" id="teste">
+                  </div>
+                  <div class="card">
+                    <label for="teste1" class="planItem">
+                      <img src="./assets/images/icon-advanced.svg" alt="" width="40" height="40">
+                      <div>
+                        <h2 class="namePlan fs-400 ff__regular">Advanced</h2>
+                        <p class="pricePlan fs-200 ff__regular" data-value="advanced">$12/mo</p>
+                      </div>
+                    </label>
+                    <input type="radio" name="name" id="teste1">
+                  </div>
+                  <div class="card">
+                    <label for="teste2" class="planItem">
+                      <img src="./assets/images/icon-pro.svg" alt="" width="40" height="40">
+                      <div>
+                        <h2 class="namePlan fs-400 ff__regular">Pro</h2>
+                        <p class="pricePlan fs-200 ff__regular" data-value="pro">$15/mo</p>
+                      </div>
+                    </label>
+                    <input type="radio" name="name" id="teste2">
+                  </div>
+                </div>
+                <div class="timeModelPlan">
+                  <input type="checkbox" name="timeModelPlan" id="timemodel">
+                  <p class="ff__medium fs-200">Monthly</p>
+                  <label class="switch" for="timemodel">
+                    <span class="slider round"></span>
+                  </label>
+                  <p class="ff__medium fs-200">Yearly</p>
+                </div>
+              </div>
+            </div>
+            <div class="step pick__addons hide" data-plan="monthly" data-id="pick_addons">
+              <div class="ff__bold">
+                <h2 class="title">Pick add-ons</h2>
+              </div>
+              <div class="subtitle fs-400 ff__regular">
+                <p>Add-ons help enhance your gaming experience.</p>
+              </div>
+              <div class="inputsList">
+                <div class="card">
+                  <div class="odd-columns flex">
+                    <input type="checkbox" name="name" id="teste" class="addOn">
+                    <div>
+                      <h2 class="nameAddon fs-200 ff__regular">Online service</h2>
+                      <p class="description fs-100 ff__regular">Access to multiplayer games</p>
+                    </div>
+                  </div>
+                  <div class="priceAddon fs-200 ff__regular">
+                    <p data-value="onlineService">+$1/mo</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="odd-columns flex">
+                    <input type="checkbox" name="name" id="" class="addOn">
+                    <div>
+                      <h2 class="nameAddon fs-200 ff__regular">Larger storage</h2>
+                      <p class="description fs-100 ff__regular">Extra 1TB of cloud save</p>
+                    </div>
+                  </div>
+                  <div class="priceAddon fs-200 ff__regular">
+                    <p data-value="largerStorage">+$2/mo</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="odd-columns flex">
+                    <input type="checkbox" name="name" id="teste2" class="addOn">
+                    <div>
+                      <h2 class="nameAddon fs-200 ff__regular">Customizable profile</h2>
+                      <p class="description fs-100 ff__regular">Custom theme on your profile</p>
+                    </div>
+                  </div>
+                  <div class="priceAddon fs-200 ff__regular">
+                    <p data-value="customizableProfile">+$2/mo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step finish__board hide" data-id="finish_board">
+              <div class="ff__bold">
+                <h2 class="title">Finishing up</h2>
+              </div>
+              <div class="subtitle ff__regular">
+                <p>Double-check everything looks OK before confirming.</p>
+              </div>
+              <div class="flex__column">
+                <div class="summary">
+                  <p class="summaryPlan fs-200 ff__medium">Arcade</p>
+                  <div class="summaryPlanBox">
+                    <p class="summaryPlanBtn clr-secondary-text fs-200 ff__regular">Change</p>
+                    <p class="summaryPlanValue fs-200 ff__bold"></p>
+                  </div>
+                  <div class="add_ons">
+                  </div>
+                </div>
+                <div class="summaryTotal">
+                  <p class="clr-secondary-text fs-400 ff__regular">Total</p>
+                  <p class="totalpay fs-400 ff__bold"></p>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="thankyouWindow hide">
+            <img src="assets/images/icon-thank-you.svg" alt="icon thank you" width="80" height="80">
+            <h2 class="fs-900 ff__bold">Thank you</h2>
+            <p class="fs-400 clr-secondary-text ff__regular">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need
+              support, please feel free to email us at support@loremgaming.com.</p>
+          </div>
+        </section>
+        <section class="btn ff__regular">
+          <div class="previous__next" data-currentCard="personal_info">
+            <button class="nav__btn prev">Go Back</button>
+            <button class="nav__btn next">Next Step</button>
+            <button class="nav__btn confirm__btn hide">Confirm</button>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
